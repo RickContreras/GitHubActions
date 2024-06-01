@@ -10,6 +10,7 @@ def main():
     
     # Imprimir el saludo personalizado
     print(f"¡Hola, {nombre} desde GitHub!")
+    #print(f"¡Hola desde GitHub!")
 
 if __name__ == "__main__":
     main()
