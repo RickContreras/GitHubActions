@@ -6,16 +6,4 @@ jobs:
     if: ${{ github.ref == 'refs/heads/main' }}
     runs-on: ubuntu-latest
     steps:
-      - name: Step to create output
-        id: previous_step  # Este ID se usará para referenciar este paso
-        run: echo "::set-output name=resultado::Valor de ejemplo"  # Establece la salida llamada 'resultado'
-      - name: Print branch
-        run: echo "Desplegando en la rama $GITHUB_REF"
-      - name: Print executing branch
-        run: echo "Se está ejecutando la rama: ${{ github.ref }}"
-      - name: Print workflow name
-        run: echo "El nombre del workflow es: ${{ github.workflow }}"
-      - name: Print actor
-        run: echo "El workflow fue activado por: ${{ github.actor }}"
-      - name: Print previous step result
-        run: echo "El resultado del paso anterior fue: ${{ steps.previous_step.outputs.resultado }}"  # Referencia a la salida del paso anterior
+      - run: echo "Desplegando en la rama $GITHUB_REF"
